@@ -44,6 +44,8 @@ func main() {
 	root, _ := workspace.GetObject("root")
 	malayalam_rune_slice := []rune{0x0D2E, 0x0D27, 0x0D41}
 	root.SetAttribute("my_name", string(malayalam_rune_slice))
+	root.SetAttribute("language", "go")
+	root.SetAttribute("my_guid", guid)
 
 	vm := root.GetAttribute("vm").(*client.VMDB_Object)
 
